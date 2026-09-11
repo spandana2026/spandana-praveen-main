@@ -1,5 +1,0 @@
-[
-  {"id":"nepal","title":"Nepal Emergency Relief","location":"Nepal","description":"Emergency response and relief campaign. Add verified campaign details, impact updates and real field photographs through the Admin panel.","image":"","status":"active","published":true,"order":1},
-  {"id":"manipur","title":"Manipur Emergency Relief","location":"Manipur, India","description":"Emergency response and relief campaign. Add verified campaign details, impact updates and real field photographs through the Admin panel.","image":"","status":"active","published":true,"order":2},
-  {"id":"bihar","title":"Bihar Emergency Relief","location":"Bihar, India","description":"Emergency response and relief campaign. Add verified campaign details, impact updates and real field photographs through the Admin panel.","image":"","status":"active","published":true,"order":3}
-]
