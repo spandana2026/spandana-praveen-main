@@ -1,0 +1,53 @@
+{
+  "name": "adminaccounts",
+  "type": "collection",
+  "options": {},
+  "indexes": [
+    {
+      "v": 2,
+      "key": {
+        "_id": 1
+      },
+      "name": "_id_"
+    },
+    {
+      "v": 2,
+      "key": {
+        "username": 1
+      },
+      "name": "username_1",
+      "background": true,
+      "unique": true
+    }
+  ],
+  "documents": [
+    {
+      "_id": {
+        "$oid": "6aa3eb1e4b69ca4204e4323d"
+      },
+      "username": "admin",
+      "passwordHash": "$2b$12$bFwPPJtvOMzaPaYl6vlQPO3Oidz/fiVQkkC9tELnvFkdX8ohZ2tM2",
+      "recoveryEmail": "spandanawebsite@gmail.com",
+      "recoveryMobile": "9704075143",
+      "recoveryEmailVerified": true,
+      "recoveryMobileVerified": false,
+      "backupQuestions": [],
+      "passwordVersion": 1,
+      "failedLoginCount": 0,
+      "lockedUntil": null,
+      "lastLoginAt": {
+        "$date": "2026-09-11T11:50:54.589Z"
+      },
+      "passwordChangedAt": {
+        "$date": "2026-09-11T11:50:54.223Z"
+      },
+      "createdAt": {
+        "$date": "2026-09-11T11:50:54.223Z"
+      },
+      "updatedAt": {
+        "$date": "2026-09-11T11:50:54.590Z"
+      },
+      "__v": 0
+    }
+  ]
+}

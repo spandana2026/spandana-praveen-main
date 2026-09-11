@@ -1,0 +1,31 @@
+{
+  "name": "spandana-mern",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently \"npm run dev --prefix backend\" \"npm run dev --prefix frontend\"",
+    "backend": "npm run dev --prefix backend",
+    "frontend": "npm run dev --prefix frontend",
+    "install:all": "npm install && npm install --prefix backend && npm install --prefix frontend",
+    "build": "npm install --prefix frontend --include=dev && npm run build --prefix frontend && npm install --prefix backend --omit=dev",
+    "start": "node index.js",
+    "diagnose": "node scripts/diagnose.mjs",
+    "test:navigation": "node scripts/run-playwright-navigation.mjs",
+    "test:navigation:visual": "node scripts/run-playwright-navigation.mjs tests/navigation/visual.spec.ts",
+    "test:navigation:controls": "node scripts/run-playwright-navigation.mjs tests/navigation/mobile-designer-controls.spec.ts",
+    "test:navigation:live-preview": "node scripts/run-playwright-navigation.mjs tests/navigation/live-page-preview.spec.ts",
+    "recovery:status": "node scripts/recovery/recovery-status.mjs",
+    "recovery:backup": "node scripts/recovery/backup-system.mjs",
+    "recovery:restore": "node scripts/recovery/restore-system.mjs",
+    "recovery:console": "node scripts/recovery/recovery-console.mjs",
+    "recovery:email-check": "node scripts/recovery/check-email.mjs"
+  },
+  "devDependencies": {
+    "concurrently": "9.1.2",
+    "@playwright/test": "1.63.0"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}

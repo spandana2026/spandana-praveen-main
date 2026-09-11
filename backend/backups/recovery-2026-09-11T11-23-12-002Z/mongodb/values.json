@@ -1,0 +1,109 @@
+{
+  "name": "values",
+  "type": "collection",
+  "options": {},
+  "indexes": [
+    {
+      "v": 2,
+      "key": {
+        "_id": 1
+      },
+      "name": "_id_"
+    },
+    {
+      "v": 2,
+      "key": {
+        "id": 1
+      },
+      "name": "id_1",
+      "background": true
+    }
+  ],
+  "documents": [
+    {
+      "_id": {
+        "$oid": "6a84865bbbbabe1256ae1b5b"
+      },
+      "title": "Compassion",
+      "description": "We lead with empathy, treating every individual we serve with dignity and genuine care — regardless of background, caste, or circumstance.",
+      "icon": "Heart",
+      "order": 1,
+      "published": true,
+      "createdAt": {
+        "$date": "2026-07-14T01:05:50.821Z"
+      },
+      "updatedAt": {
+        "$date": "2026-07-14T01:05:50.821Z"
+      },
+      "__v": 0
+    },
+    {
+      "_id": {
+        "$oid": "6a84865bbbbabe1256ae1b5c"
+      },
+      "title": "Integrity",
+      "description": "We are transparent in our finances, honest in our reporting, and accountable to the communities we serve and the donors who trust us.",
+      "icon": "Shield",
+      "order": 2,
+      "published": true,
+      "createdAt": {
+        "$date": "2026-07-14T01:05:50.821Z"
+      },
+      "updatedAt": {
+        "$date": "2026-07-14T01:05:50.821Z"
+      },
+      "__v": 0
+    },
+    {
+      "_id": {
+        "$oid": "6a84865bbbbabe1256ae1b5d"
+      },
+      "title": "Community First",
+      "description": "Every decision we make is guided by what is best for the communities we serve. We listen before we act, and we stay long after the cameras leave.",
+      "icon": "Users",
+      "order": 3,
+      "published": true,
+      "createdAt": {
+        "$date": "2026-07-14T01:05:50.821Z"
+      },
+      "updatedAt": {
+        "$date": "2026-07-14T01:05:50.821Z"
+      },
+      "__v": 0
+    },
+    {
+      "_id": {
+        "$oid": "6a84865bbbbabe1256ae1b5e"
+      },
+      "title": "Inclusion",
+      "description": "We serve all — irrespective of gender, religion, age, or economic status. Vulnerability is our only eligibility criterion.",
+      "icon": "Globe",
+      "order": 4,
+      "published": true,
+      "createdAt": {
+        "$date": "2026-07-14T01:05:50.821Z"
+      },
+      "updatedAt": {
+        "$date": "2026-07-14T01:05:50.821Z"
+      },
+      "__v": 0
+    },
+    {
+      "_id": {
+        "$oid": "6a84865bbbbabe1256ae1b5f"
+      },
+      "title": "Sustainability",
+      "description": "We build programmes that communities can eventually own and run themselves. Our goal is to make ourselves unnecessary — one community at a time.",
+      "icon": "Leaf",
+      "order": 5,
+      "published": true,
+      "createdAt": {
+        "$date": "2026-07-14T01:05:50.821Z"
+      },
+      "updatedAt": {
+        "$date": "2026-07-14T01:05:50.821Z"
+      },
+      "__v": 0
+    }
+  ]
+}

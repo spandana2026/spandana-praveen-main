@@ -1,0 +1,22 @@
+[
+  {
+    "id":"winter-blankets-2026",
+    "title":"Blankets for Winter Warmth",
+    "description":"Provide one warm blanket to a family this winter.",
+    "parentType":"campaign",
+    "parentId":"winter-warmth-2026",
+    "geography":"india",
+    "currency":"INR",
+    "unitName":"blanket",
+    "unitCost":800,
+    "targetQuantity":1000,
+    "targetAmount":800000,
+    "visibility":"public",
+    "fundable":true,
+    "status":"active",
+    "published":true,
+    "order":10,
+    "createdAt":"2026-09-02T00:00:00.000Z",
+    "updatedAt":"2026-09-02T00:00:00.000Z"
+  }
+]

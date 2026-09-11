@@ -1,0 +1,197 @@
+{
+  "schemaVersion": 2,
+  "id": "recovery-2026-09-11T12-30-33-054Z",
+  "createdAt": "2026-09-11T12:30:33.054Z",
+  "reason": "settings-published",
+  "status": "good",
+  "verifiedAt": "2026-09-11T12:30:35.892Z",
+  "application": {
+    "gitCommit": null,
+    "gitBranch": null,
+    "node": "v24.16.0",
+    "platform": "win32"
+  },
+  "included": {
+    "database": true,
+    "settings": true,
+    "data": true,
+    "uploads": true,
+    "docs": true,
+    "knowledge": true
+  },
+  "mongo": {
+    "status": "complete",
+    "format": "spandana-native-bson-json",
+    "databaseName": "test",
+    "collections": [
+      {
+        "name": "contributions",
+        "documents": 0,
+        "indexes": 2
+      },
+      {
+        "name": "emergencycampaigns",
+        "documents": 0,
+        "indexes": 1
+      },
+      {
+        "name": "refunds",
+        "documents": 0,
+        "indexes": 2
+      },
+      {
+        "name": "adminaccounts",
+        "documents": 1,
+        "indexes": 2
+      },
+      {
+        "name": "values",
+        "documents": 0,
+        "indexes": 1
+      },
+      {
+        "name": "adminrecoverychallenges",
+        "documents": 0,
+        "indexes": 2
+      },
+      {
+        "name": "fundraisingcampaigns",
+        "documents": 0,
+        "indexes": 1
+      },
+      {
+        "name": "donationopportunities",
+        "documents": 0,
+        "indexes": 1
+      },
+      {
+        "name": "teamsessions",
+        "documents": 0,
+        "indexes": 2
+      },
+      {
+        "name": "events",
+        "documents": 0,
+        "indexes": 1
+      },
+      {
+        "name": "programs",
+        "documents": 0,
+        "indexes": 3
+      },
+      {
+        "name": "recurringdonations",
+        "documents": 0,
+        "indexes": 1
+      },
+      {
+        "name": "paymentaccounts",
+        "documents": 0,
+        "indexes": 1
+      },
+      {
+        "name": "galleries",
+        "documents": 0,
+        "indexes": 1
+      },
+      {
+        "name": "gamelistings",
+        "documents": 0,
+        "indexes": 1
+      },
+      {
+        "name": "recyclebinitems",
+        "documents": 0,
+        "indexes": 3
+      },
+      {
+        "name": "requirements",
+        "documents": 0,
+        "indexes": 1
+      },
+      {
+        "name": "receipts",
+        "documents": 0,
+        "indexes": 2
+      },
+      {
+        "name": "transactions",
+        "documents": 0,
+        "indexes": 2
+      },
+      {
+        "name": "adminsessions",
+        "documents": 1,
+        "indexes": 2
+      },
+      {
+        "name": "settings",
+        "documents": 2,
+        "indexes": 2
+      },
+      {
+        "name": "communityinitiatives",
+        "documents": 0,
+        "indexes": 1
+      },
+      {
+        "name": "teams",
+        "documents": 0,
+        "indexes": 2
+      },
+      {
+        "name": "testimonials",
+        "documents": 0,
+        "indexes": 1
+      },
+      {
+        "name": "stories",
+        "documents": 0,
+        "indexes": 1
+      },
+      {
+        "name": "blogposts",
+        "documents": 0,
+        "indexes": 1
+      },
+      {
+        "name": "people",
+        "documents": 0,
+        "indexes": 1
+      },
+      {
+        "name": "newsletters",
+        "documents": 0,
+        "indexes": 2
+      },
+      {
+        "name": "auditevents",
+        "documents": 0,
+        "indexes": 1
+      },
+      {
+        "name": "paymentprofiles",
+        "documents": 0,
+        "indexes": 1
+      },
+      {
+        "name": "volunteers",
+        "documents": 0,
+        "indexes": 1
+      }
+    ]
+  },
+  "settings": {
+    "livePresent": true,
+    "draftPresent": true,
+    "historyPresent": true,
+    "mongoSnapshotPresent": true
+  },
+  "secondaryDestination": null,
+  "verification": {
+    "applicationHealth": "healthy",
+    "requiredFilesPresent": true,
+    "reasons": []
+  },
+  "note": "A recovery point is marked GOOD only after its required artifacts are present and application health is verified."
+}

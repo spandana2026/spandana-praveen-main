@@ -1,0 +1,67 @@
+{
+  "name": "contributions",
+  "type": "collection",
+  "options": {},
+  "indexes": [
+    {
+      "v": 2,
+      "key": {
+        "_id": 1
+      },
+      "name": "_id_"
+    },
+    {
+      "v": 2,
+      "key": {
+        "reference": 1
+      },
+      "name": "reference_1",
+      "background": true,
+      "unique": true
+    },
+    {
+      "v": 2,
+      "key": {
+        "id": 1
+      },
+      "name": "id_1",
+      "background": true
+    }
+  ],
+  "documents": [
+    {
+      "_id": {
+        "$oid": "6a9ec0d1ba52fc6fea82cedf"
+      },
+      "reference": "CON-20260907134905-ERBQE",
+      "personId": null,
+      "anonymous": false,
+      "communicationConsent": false,
+      "donor": {
+        "name": "",
+        "email": "",
+        "mobile": "",
+        "country": ""
+      },
+      "supportType": "cash",
+      "targetType": "opportunity",
+      "targetId": "6a9c0cf11cc98b56d5a700a7",
+      "title": "Plant a Tree",
+      "quantity": null,
+      "unitName": "",
+      "amount": 50,
+      "currency": "INR",
+      "note": "",
+      "recurring": false,
+      "inKindStatus": "pledged",
+      "status": "pending",
+      "createdAt": {
+        "$date": "2026-09-07T13:49:05.831Z"
+      },
+      "updatedAt": {
+        "$date": "2026-09-07T13:49:05.831Z"
+      },
+      "__v": 0
+    }
+  ]
+}

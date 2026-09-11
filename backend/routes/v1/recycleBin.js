@@ -1,0 +1,10 @@
+import { Router } from 'express';
+import { requireAdmin } from '../../middleware/auth.js';
+import { asyncHandler } from '../../middleware/asyncHandler.js';
+import * as ctrl from '../../controllers/recycleBinController.js';
+const router=Router();
+router.get('/admin/recycle-bin',requireAdmin,asyncHandler(ctrl.list));
+router.post('/admin/recycle-bin/:id/restore',requireAdmin,asyncHandler(ctrl.restore));
+router.delete('/admin/recycle-bin/:id',requireAdmin,asyncHandler(ctrl.permanentDelete));
+router.delete('/admin/recycle-bin',requireAdmin,asyncHandler(ctrl.empty));
+export default router;

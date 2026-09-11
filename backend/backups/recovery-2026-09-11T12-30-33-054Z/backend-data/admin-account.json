@@ -1,0 +1,19 @@
+[
+  {
+    "id": "6fdfede1-3d36-466f-a50a-9823a926a011",
+    "username": "admin",
+    "passwordHash": "$2b$12$9.9LTMev/SOxS8grLpGBy.lW8KVhdsUp3j63GRMm5pkTyDNBSEekS",
+    "recoveryEmail": "",
+    "recoveryMobile": "",
+    "recoveryEmailVerified": false,
+    "recoveryMobileVerified": false,
+    "backupQuestions": [],
+    "passwordVersion": 1,
+    "failedLoginCount": 0,
+    "lockedUntil": null,
+    "lastLoginAt": "2026-09-02T10:53:23.716Z",
+    "passwordChangedAt": "2026-09-02T10:53:23.391Z",
+    "createdAt": "2026-09-02T10:53:23.392Z",
+    "updatedAt": "2026-09-02T11:01:15.101Z"
+  }
+]

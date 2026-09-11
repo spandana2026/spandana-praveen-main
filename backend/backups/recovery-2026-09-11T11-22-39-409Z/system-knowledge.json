@@ -1,0 +1,487 @@
+{
+  "schemaVersion": 2,
+  "title": "Spandana System Knowledge",
+  "purpose": "A single searchable knowledge layer for why the system exists, how it behaves, where it is configured, and how it can be recovered. Source code remains in the repository and is referenced rather than duplicated here.",
+  "domains": [
+    {
+      "id": "settings",
+      "label": "Settings & Design",
+      "records": [
+        {
+          "id": "setting-publish",
+          "title": "Publish button",
+          "tags": [
+            "publish",
+            "save",
+            "settings",
+            "button"
+          ],
+          "answer": "Publish makes the approved draft settings/content become the live public configuration. It exists to keep editing separate from public release, so an administrator can prepare changes before making them visible.",
+          "status": "implemented",
+          "relatedSettings": [
+            "nav.structure",
+            "settings draft/publish flow"
+          ]
+        },
+        {
+          "id": "setting-save-draft",
+          "title": "Save Draft button",
+          "tags": [
+            "save",
+            "draft",
+            "settings",
+            "button"
+          ],
+          "answer": "Save Draft persists the current administrator changes without making them live. It exists to allow safe preparation and review before publication.",
+          "status": "implemented"
+        },
+        {
+          "id": "setting-hide-show",
+          "title": "Show / Hide controls",
+          "tags": [
+            "show",
+            "hide",
+            "visibility",
+            "button",
+            "settings"
+          ],
+          "answer": "Show / Hide controls change visibility without deleting the underlying content. This preserves the record while allowing administrators to temporarily remove it from the public experience.",
+          "status": "implemented"
+        },
+        {
+          "id": "setting-reorder",
+          "title": "Reorder controls",
+          "tags": [
+            "reorder",
+            "order",
+            "drag",
+            "navigation",
+            "button"
+          ],
+          "answer": "Reorder changes presentation order while retaining the same canonical records. It exists so administrators can control sequence without creating duplicate content.",
+          "status": "implemented"
+        },
+        {
+          "id": "setting-duplicate",
+          "title": "Duplicate control",
+          "tags": [
+            "duplicate",
+            "copy",
+            "button"
+          ],
+          "answer": "Duplicate creates a new editable record from an existing one. It is intended for repeated structures while keeping the new record independently editable.",
+          "status": "implemented"
+        },
+        {
+          "id": "setting-delete",
+          "title": "Delete vs Hide",
+          "tags": [
+            "delete",
+            "hide",
+            "recycle bin",
+            "button"
+          ],
+          "answer": "Hide is the safe visibility action; Delete is a destructive lifecycle action and should use the system's recovery/recycle-bin behavior where supported. The two actions must never be treated as interchangeable.",
+          "status": "implemented"
+        },
+        {
+          "id": "header-design",
+          "title": "Header / Navigation design",
+          "tags": [
+            "header",
+            "navigation",
+            "design",
+            "menu",
+            "button",
+            "settings"
+          ],
+          "answer": "Header and Navigation are a canonical shared system. Desktop, mobile strip, hamburger drawer and dropdown presentation are driven by the central navigation settings so the public site and visual designer use the same structure and styling source.",
+          "status": "implemented",
+          "relatedSettings": [
+            "nav",
+            "nav.design.desktop",
+            "nav.design.mobile"
+          ]
+        },
+        {
+          "id": "theme-settings",
+          "title": "Theme & Fonts",
+          "tags": [
+            "theme",
+            "font",
+            "color",
+            "accessibility",
+            "settings"
+          ],
+          "answer": "Theme settings centralize the site's primary visual language so typography and core styling can be changed consistently rather than separately on individual pages.",
+          "status": "implemented",
+          "relatedSettings": [
+            "theme",
+            "accessibility"
+          ]
+        },
+        {
+          "id": "seo-central",
+          "title": "Central SEO",
+          "tags": [
+            "seo",
+            "metadata",
+            "donate",
+            "settings"
+          ],
+          "answer": "SEO is centralized under Admin → Site Management → SEO. Feature areas supply their campaign/page metadata to this central system instead of creating separate SEO systems.",
+          "status": "implemented",
+          "relatedSettings": [
+            "seo"
+          ]
+        },
+        {
+          "id": "sahara-canonical",
+          "title": "Sahara program source",
+          "tags": [
+            "sahara",
+            "programs",
+            "physical care",
+            "mental care",
+            "database"
+          ],
+          "answer": "Sahara is a presentation/domain layer. Programs remain canonical in the Core Programs source; Sahara should not create a duplicate program database. Its public hierarchy is Introduction → Physical Care / Mental Care → individual programs.",
+          "status": "implemented",
+          "relatedSettings": [
+            "saharaPage",
+            "physicalHealthSections",
+            "mentalHealthSections"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "database",
+      "label": "Database",
+      "records": [
+        {
+          "id": "database-source",
+          "title": "Database source of truth",
+          "tags": [
+            "database",
+            "mongodb",
+            "source of truth",
+            "json"
+          ],
+          "answer": "MongoDB is the preferred production database when configured. The existing JSON fallback remains available for local/degraded operation. The same model layer is intended to keep application behavior aligned across both modes.",
+          "status": "implemented"
+        },
+        {
+          "id": "database-snapshot",
+          "title": "Database snapshot",
+          "tags": [
+            "database",
+            "backup",
+            "snapshot",
+            "mongodb"
+          ],
+          "answer": "Verified Recovery Points capture the live/draft settings state, JSON data, uploads, documentation/knowledge, and MongoDB when configured. This is the system recovery snapshot, not merely a downloadable JSON export.",
+          "status": "implemented",
+          "relatedFiles": [
+            "backend/services/backupService.js",
+            "scripts/recovery/backup-system.mjs"
+          ]
+        },
+        {
+          "id": "database-recovery",
+          "title": "Database recovery",
+          "tags": [
+            "database",
+            "restore",
+            "recovery",
+            "backup"
+          ],
+          "answer": "The system now creates verified Recovery Points, retains them, restores a selected GOOD point, and preserves a pre-restore snapshot before destructive restoration. MongoDB is restored with mongorestore when configured; file-backed data/settings/media are restored from the same point.",
+          "status": "implemented",
+          "relatedFiles": [
+            "scripts/recovery/backup-system.mjs",
+            "scripts/recovery/restore-system.mjs"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "security",
+      "label": "Security & Recovery",
+      "records": [
+        {
+          "id": "admin-auth",
+          "title": "Admin authentication",
+          "tags": [
+            "security",
+            "admin",
+            "authentication",
+            "session"
+          ],
+          "answer": "Admin access uses server-managed opaque sessions in an HttpOnly cookie. Passwords are hashed, sessions are persisted with password-version binding, and password changes revoke other Admin sessions.",
+          "status": "implemented",
+          "relatedFiles": [
+            "backend/controllers/authController.js",
+            "backend/models/AdminSession.js"
+          ]
+        },
+        {
+          "id": "external-password-recovery",
+          "title": "Admin password recovery outside the panel",
+          "tags": [
+            "recovery",
+            "admin",
+            "password",
+            "otp",
+            "outside admin"
+          ],
+          "answer": "Admin password recovery is available from the Admin login/recovery screen without an existing Admin session. The flow supports verified email or mobile OTP, optional backup recovery questions, a time-limited reset window, and session invalidation after reset.",
+          "status": "implemented",
+          "relatedFiles": [
+            "frontend/src/pages/admin/index.tsx",
+            "backend/routes/v1/auth.js",
+            "backend/controllers/authController.js"
+          ]
+        },
+        {
+          "id": "external-admin-crash-recovery",
+          "title": "Recover a crashed Admin outside the Admin Panel",
+          "tags": [
+            "recovery",
+            "crash",
+            "admin",
+            "outside",
+            "rollback",
+            "redeploy"
+          ],
+          "answer": "An independent Recovery Console now runs outside the Admin Panel. It authenticates normal operators with a one-time code sent to the configured recovery email, rather than requiring a manually managed recovery key. After verification it can check system health, list verified Recovery Points, create a backup, restore the latest GOOD point or a selected GOOD point, and restart the Docker application. A short-lived HttpOnly recovery session, rate limiting, single-use OTPs, expiry and same-origin checks protect recovery actions.",
+          "status": "implemented",
+          "relatedFiles": [
+            "scripts/recovery/recovery-console.mjs",
+            "scripts/recovery/backup-system.mjs",
+            "scripts/recovery/restore-system.mjs",
+            "docker-compose.yml",
+            "nginx/spandana.conf"
+          ]
+        },
+        {
+          "id": "recovery-limitations",
+          "title": "Recovery limitations",
+          "tags": [
+            "recovery",
+            "disaster recovery",
+            "backup",
+            "limitation"
+          ],
+          "answer": "The application now has an independent recovery control plane, email OTP authentication, and verified Recovery Points. For protection against loss of the entire host, a durable secondary/off-host backup destination still must be configured. The recovery console cannot recover a machine whose storage and runtime are completely unavailable; infrastructure failover remains an operational dependency.",
+          "status": "partial"
+        },
+        {
+          "id": "security-secrets",
+          "title": "Secrets handling",
+          "tags": [
+            "security",
+            "secret",
+            "password",
+            "token",
+            "environment"
+          ],
+          "answer": "Secrets belong in environment configuration and are excluded/redacted from System Knowledge exports. The repository includes .env.example as a configuration contract; .env should not be committed.",
+          "status": "implemented"
+        }
+      ]
+    },
+    {
+      "id": "infrastructure",
+      "label": "Infrastructure",
+      "records": [
+        {
+          "id": "runtime",
+          "title": "Application runtime",
+          "tags": [
+            "infrastructure",
+            "node",
+            "express",
+            "react",
+            "vite"
+          ],
+          "answer": "The application is a React/Vite frontend with a Node.js/Express backend. The root entry point starts the backend, which can also serve the built frontend for single-app hosting.",
+          "status": "implemented"
+        },
+        {
+          "id": "docker-restart",
+          "title": "Automatic process restart",
+          "tags": [
+            "docker",
+            "restart",
+            "infrastructure",
+            "recovery"
+          ],
+          "answer": "Docker Compose uses restart: unless-stopped for the application and nginx containers. This provides automatic process/container restart after an ordinary crash or host restart while Docker itself is available.",
+          "status": "implemented"
+        },
+        {
+          "id": "pm2-restart",
+          "title": "PM2 restart support",
+          "tags": [
+            "pm2",
+            "restart",
+            "deployment",
+            "recovery"
+          ],
+          "answer": "The deployment script supports PM2 and restarts the Spandana API when PM2 is installed. This is an additional process-supervision path for VPS-style deployments.",
+          "status": "implemented",
+          "relatedFiles": [
+            "deploy.sh",
+            "ecosystem.config.json"
+          ]
+        },
+        {
+          "id": "deployment",
+          "title": "Deployment recovery",
+          "tags": [
+            "deployment",
+            "rollback",
+            "git",
+            "infrastructure"
+          ],
+          "answer": "The repository is the rebuild source. The recovery tooling can identify the current Git commit, create a backup, optionally check out a known-good commit, rebuild the frontend, and restart the service using Docker Compose or PM2 where available.",
+          "status": "implemented",
+          "relatedFiles": [
+            "scripts/recovery/rollback-and-redeploy.sh"
+          ]
+        },
+        {
+          "id": "verified-recovery-points",
+          "title": "Verified Recovery Points",
+          "tags": [
+            "backup",
+            "recovery",
+            "settings",
+            "database",
+            "restore"
+          ],
+          "answer": "Recovery Points are created automatically by the recovery service on a daily schedule and at important settings publication boundaries. Each point records the system state, settings, database backup status, application version reference and verification result. Only a point with required artifacts and healthy application response is marked GOOD.",
+          "status": "implemented",
+          "relatedFiles": [
+            "backend/services/backupService.js",
+            "scripts/recovery/recovery-console.mjs"
+          ]
+        },
+        {
+          "id": "independent-recovery-console",
+          "title": "Independent Recovery Console",
+          "tags": [
+            "recovery",
+            "console",
+            "admin crash",
+            "outside admin"
+          ],
+          "answer": "A separate recovery service is provided so recovery actions remain available when the Admin Panel frontend is unavailable. Normal operator access uses a one-time code sent to the configured recovery email. The service issues a short-lived recovery session and can restart the Docker application when Docker control is available.",
+          "status": "implemented",
+          "relatedFiles": [
+            "scripts/recovery/recovery-console.mjs",
+            "recovery-console.Dockerfile",
+            "docker-compose.yml",
+            "nginx/spandana.conf"
+          ]
+        },
+        {
+          "id": "email-emergency-recovery",
+          "title": "Email emergency recovery authentication",
+          "tags": [
+            "recovery",
+            "email",
+            "otp",
+            "emergency",
+            "security"
+          ],
+          "answer": "The independent Recovery Console uses the dedicated ADMIN_RECOVERY_EMAIL as the operator recovery identity. A six-digit one-time code is sent through the configured email service, expires after 10 minutes, is single-use, and is limited to five verification attempts. After verification, a short-lived HttpOnly session permits recovery actions for 15 minutes.",
+          "status": "implemented",
+          "relatedFiles": [
+            "scripts/recovery/recovery-console.mjs",
+            "backend/.env.example",
+            "docker-compose.yml"
+          ]
+        },
+        {
+          "id": "recovery-console-actions",
+          "title": "Recovery Console buttons and session flow",
+          "tags": [
+            "recovery console",
+            "buttons",
+            "otp",
+            "backup",
+            "restore",
+            "restart",
+            "health",
+            "logout",
+            "sign out"
+          ],
+          "answer": "The independent Recovery Console is an emergency operations interface outside the Admin Panel. Email OTP authenticates a short-lived recovery session. Check System performs diagnostics without changing system state. Create Backup Now creates and verifies a Recovery Point. Restart Application restarts the main application and then health can be checked. Recover Last Good restores the latest VERIFIED GOOD Recovery Point after attempting to preserve the current state first. Restore this point restores a specifically selected GOOD Recovery Point after confirmation and a pre-restore safety snapshot when possible. Lock / Sign Out destroys the recovery session and returns to the OTP screen. There is no browser Exit action that can safely stop the recovery-console server; stopping the server is an infrastructure operation. Only GOOD/verified Recovery Points are restorable.",
+          "status": "implemented",
+          "relatedFiles": [
+            "scripts/recovery/recovery-console.mjs",
+            "scripts/recovery/backup-system.mjs",
+            "scripts/recovery/restore-system.mjs"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "history",
+      "label": "Project History",
+      "records": [
+        {
+          "id": "history-consolidation",
+          "title": "Knowledge consolidation",
+          "tags": [
+            "history",
+            "knowledge",
+            "architecture"
+          ],
+          "answer": "The System Knowledge Center is being moved away from fragmented documentation into one central searchable knowledge layer. Historical project documents remain available as evidence, while the interactive center focuses on current system truth and rationale.",
+          "status": "implemented"
+        },
+        {
+          "id": "history-current",
+          "title": "Current architecture principle",
+          "tags": [
+            "history",
+            "architecture",
+            "single source of truth"
+          ],
+          "answer": "The current direction is to keep canonical data and settings in their proper systems, avoid duplicate feature-specific systems, and make the Knowledge Center an explanatory/indexing layer rather than another copy of the application's code or data.",
+          "status": "implemented"
+        }
+      ]
+    }
+  ],
+  "infrastructure": [
+    {
+      "id": "ser-local-production-routing",
+      "title": "SER local vs production application routing",
+      "answer": "SER uses localhost:3000 for local development when RECOVERY_APP_URL is not set. In production it defaults to the Docker application address http://spandana:5000; production deployment can explicitly set RECOVERY_APP_URL. This keeps Check System and Recovery verification environment-aware.",
+      "tags": [
+        "SER",
+        "recovery",
+        "health-check",
+        "local",
+        "production"
+      ]
+    }
+  ],
+  "security": [
+    {
+      "id": "ser-safe-verification",
+      "title": "SER Safe Verification",
+      "answer": "Verify SER Safely runs non-destructive checks for recovery email configuration, Gmail SMTP, main application health, recovery point index, and Docker availability. In local non-Docker testing, Docker is treated as not required rather than a failed prerequisite. It does not restore, delete, or restart the application.",
+      "tags": [
+        "SER",
+        "testing",
+        "security",
+        "verification"
+      ]
+    }
+  ]
+}

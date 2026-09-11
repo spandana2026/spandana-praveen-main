@@ -1,0 +1,232 @@
+{
+  "name": "gamelistings",
+  "type": "collection",
+  "options": {},
+  "indexes": [
+    {
+      "v": 2,
+      "key": {
+        "_id": 1
+      },
+      "name": "_id_"
+    },
+    {
+      "v": 2,
+      "key": {
+        "id": 1
+      },
+      "name": "id_1",
+      "background": true
+    }
+  ],
+  "documents": [
+    {
+      "_id": {
+        "$oid": "6a84865bbbbabe1256ae1b3c"
+      },
+      "title": "Tic Tac Toe",
+      "description": "Classic 3×3 strategy game. Play vs a friend or challenge the AI. Simple rules, endless fun.",
+      "emoji": "⭕",
+      "slug": "tic-tac-toe",
+      "category": "Strategy",
+      "isFree": true,
+      "isPaid": false,
+      "price": 0,
+      "published": true,
+      "order": 1,
+      "featured": true,
+      "sourceType": "url",
+      "audience": "all",
+      "playMode": "free",
+      "createdAt": {
+        "$date": "2026-07-14T01:05:50.821Z"
+      },
+      "updatedAt": {
+        "$date": "2026-07-14T01:05:50.821Z"
+      },
+      "__v": 0
+    },
+    {
+      "_id": {
+        "$oid": "6a84865bbbbabe1256ae1b3d"
+      },
+      "title": "Memory Match",
+      "description": "Flip cards and find all matching pairs. Sharpen your memory and beat your best time!",
+      "emoji": "🃏",
+      "slug": "memory-match",
+      "category": "Puzzle",
+      "isFree": true,
+      "isPaid": false,
+      "price": 0,
+      "published": true,
+      "order": 2,
+      "featured": false,
+      "sourceType": "url",
+      "audience": "all",
+      "playMode": "free",
+      "createdAt": {
+        "$date": "2026-07-14T01:05:50.821Z"
+      },
+      "updatedAt": {
+        "$date": "2026-07-14T01:05:50.821Z"
+      },
+      "__v": 0
+    },
+    {
+      "_id": {
+        "$oid": "6a84865bbbbabe1256ae1b3e"
+      },
+      "title": "Ludo",
+      "description": "The classic board game for 2–4 players. Race your tokens home before your opponents!",
+      "emoji": "🎲",
+      "slug": "ludo",
+      "category": "Board",
+      "isFree": true,
+      "isPaid": false,
+      "price": 0,
+      "published": true,
+      "order": 3,
+      "featured": true,
+      "sourceType": "url",
+      "audience": "all",
+      "playMode": "free",
+      "createdAt": {
+        "$date": "2026-07-14T01:05:50.821Z"
+      },
+      "updatedAt": {
+        "$date": "2026-07-14T01:05:50.821Z"
+      },
+      "__v": 0
+    },
+    {
+      "_id": {
+        "$oid": "6a84865bbbbabe1256ae1b3f"
+      },
+      "title": "Snakes & Ladders",
+      "description": "Roll the dice, climb ladders, and avoid the snakes. Pure family fun!",
+      "emoji": "🐍",
+      "slug": "snakes-ladders",
+      "category": "Board",
+      "isFree": true,
+      "isPaid": false,
+      "price": 0,
+      "published": true,
+      "order": 4,
+      "featured": false,
+      "sourceType": "url",
+      "audience": "all",
+      "playMode": "free",
+      "createdAt": {
+        "$date": "2026-07-14T01:05:50.821Z"
+      },
+      "updatedAt": {
+        "$date": "2026-07-14T01:05:50.821Z"
+      },
+      "__v": 0
+    },
+    {
+      "_id": {
+        "$oid": "6a84865bbbbabe1256ae1b40"
+      },
+      "title": "Tambola (Housie)",
+      "description": "The Indian bingo game! Mark your tickets as numbers are called. First full house wins!",
+      "emoji": "🎰",
+      "slug": "tambola",
+      "category": "Luck",
+      "isFree": true,
+      "isPaid": false,
+      "price": 0,
+      "published": true,
+      "order": 5,
+      "featured": true,
+      "sourceType": "url",
+      "audience": "all",
+      "playMode": "free",
+      "createdAt": {
+        "$date": "2026-07-14T01:05:50.821Z"
+      },
+      "updatedAt": {
+        "$date": "2026-07-14T01:05:50.821Z"
+      },
+      "__v": 0
+    },
+    {
+      "_id": {
+        "$oid": "6a84865bbbbabe1256ae1b41"
+      },
+      "title": "Darts",
+      "description": "Aim carefully and hit the bullseye! A timing-based darts experience for all ages.",
+      "emoji": "🎯",
+      "slug": "darts",
+      "category": "Skill",
+      "isFree": true,
+      "isPaid": false,
+      "price": 0,
+      "published": true,
+      "order": 6,
+      "featured": false,
+      "sourceType": "url",
+      "audience": "all",
+      "playMode": "free",
+      "createdAt": {
+        "$date": "2026-07-14T01:05:50.821Z"
+      },
+      "updatedAt": {
+        "$date": "2026-07-14T01:05:50.821Z"
+      },
+      "__v": 0
+    },
+    {
+      "_id": {
+        "$oid": "6a84865bbbbabe1256ae1b42"
+      },
+      "title": "Match 3 Candies",
+      "description": "Match 3 or more candies to score big! Beat 25 moves to reach the highest level.",
+      "emoji": "🍬",
+      "slug": "match3",
+      "category": "Puzzle",
+      "isFree": true,
+      "isPaid": false,
+      "price": 0,
+      "published": true,
+      "order": 7,
+      "featured": false,
+      "sourceType": "url",
+      "audience": "all",
+      "playMode": "free",
+      "createdAt": {
+        "$date": "2026-07-14T01:05:50.821Z"
+      },
+      "updatedAt": {
+        "$date": "2026-07-14T01:05:50.821Z"
+      },
+      "__v": 0
+    },
+    {
+      "_id": {
+        "$oid": "6a84865bbbbabe1256ae1b43"
+      },
+      "title": "Jungle Platformer",
+      "description": "Run, jump, and collect coins across jungle platforms. How far can you go?",
+      "emoji": "🌿",
+      "slug": "platformer",
+      "category": "Action",
+      "isFree": true,
+      "isPaid": false,
+      "price": 0,
+      "published": true,
+      "order": 8,
+      "featured": false,
+      "sourceType": "url",
+      "audience": "all",
+      "playMode": "free",
+      "createdAt": {
+        "$date": "2026-07-14T01:05:50.821Z"
+      },
+      "updatedAt": {
+        "$date": "2026-07-14T01:05:50.821Z"
+      },
+      "__v": 0
+    }
+  ]
+}

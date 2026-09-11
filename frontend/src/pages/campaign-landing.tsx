@@ -1,0 +1,26 @@
+import { useEffect, useMemo, useState } from 'react';
+import { ArrowRight, Loader2, Share2 } from 'lucide-react';
+import { Link, useRoute } from 'wouter';
+import Nav from '@/components/nav';
+import Footer from '@/components/footer';
+import CommunityChat from '@/components/community-chat';
+import { supportService } from '@/services/supportService';
+import type { CampaignDetails, FundraisingCampaign } from '@/services/supportTypes';
+
+const friendly: Record<string,string> = {
+  basicInformation:'About this initiative', fundraisingGoal:'What we are trying to achieve', needsRequirements:'What is needed', volunteersParticipation:'Ways to volunteer', skillsExpertise:'Skills we are looking for', sponsorshipOpportunities:'Sponsorship opportunities', inKindSupport:'Goods and services we need', beneficiariesImpact:'Who this helps', campaignTeamContacts:'Contact the team', locationLogistics:'Where and when', documentsAttachments:'Documents & resources', partnersSponsors:'Partners and supporters', campaignUpdatesProgress:'Updates & progress', communicationThankYou:'Stay connected', paymentGivingOptions:'Ways you can support', visibilityPublishingControls:'Sharing & visibility'
+};
+function pretty(v:string){return v.replace(/([a-z])([A-Z])/g,'$1 $2').replace(/^./,x=>x.toUpperCase())}
+function renderValue(v:any):any { if(v==null)return null; if(typeof v==='string'||typeof v==='number'||typeof v==='boolean')return <p className="text-sm leading-7 whitespace-pre-wrap">{String(v)}</p>; if(Array.isArray(v))return <div className="space-y-3">{v.map((x,i)=><div key={i} className="rounded-xl border p-3">{renderValue(x)}</div>)}</div>; return <div className="grid md:grid-cols-2 gap-3">{Object.entries(v).filter(([k])=>!['enabled','public'].includes(k)).map(([k,x])=><div key={k} className="rounded-xl border p-3"><p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-1">{pretty(k)}</p>{renderValue(x)}</div>)}</div> }
+
+export default function CampaignLanding(){
+ const [,params]=useRoute('/campaigns/:id'); const id=params?.id||''; const [campaign,setCampaign]=useState<FundraisingCampaign|null>(null); const [loading,setLoading]=useState(true);
+ useEffect(()=>{supportService.catalog().then((c:any)=>setCampaign((c.campaigns||[]).find((x:any)=>x.id===id)||null)).finally(()=>setLoading(false))},[id]);
+ const sections=useMemo(()=>{const d=(campaign?.campaignDetails||{}) as CampaignDetails;return Object.entries(d).filter(([,s])=>s?.enabled!==false&&s?.public!==false&&((s?.text||'').trim()||Object.keys(s?.data||{}).length))},[campaign]);
+ const share=()=>navigator.share?.({title:campaign?.title||'Spandana campaign',url:window.location.href}).catch(()=>navigator.clipboard?.writeText(window.location.href));
+ if(loading)return <div className="min-h-screen grid place-items-center"><Loader2 className="animate-spin"/></div>;
+ if(!campaign)return <div className="min-h-screen"><Nav/><main className="max-w-3xl mx-auto px-5 py-24 text-center"><h1 className="text-3xl font-serif">This page is not available.</h1><Link href="/donate" className="inline-flex mt-6 rounded-full bg-primary text-primary-foreground px-6 py-3">See ways to support</Link></main><Footer/></div>;
+ return <div className="min-h-screen"><Nav/><main className="max-w-5xl mx-auto px-5 py-12 md:py-20"><div className="overflow-hidden rounded-3xl border bg-card">{campaign.image&&<img src={campaign.image} alt="" className="w-full max-h-[420px] object-cover"/>}<div className="p-6 md:p-10"><div className="flex flex-wrap justify-between gap-3"><span className="text-xs uppercase tracking-widest text-muted-foreground">Spandana</span><button onClick={share} className="inline-flex items-center gap-2 text-sm font-semibold"><Share2 size={15}/>Share</button></div><h1 className="text-4xl md:text-6xl font-serif mt-3">{campaign.title}</h1>{campaign.description&&<p className="text-lg text-muted-foreground mt-4 max-w-3xl">{campaign.description}</p>}<div className="mt-7 flex flex-wrap gap-3"><Link href={`/donate?campaignId=${encodeURIComponent(campaign.id)}`} className="inline-flex items-center gap-2 rounded-full bg-primary text-primary-foreground px-6 py-3 font-semibold">Support this initiative <ArrowRight size={16}/></Link><button onClick={()=>navigator.clipboard?.writeText(window.location.href)} className="rounded-full border px-6 py-3 font-semibold">Copy link</button></div></div></div>
+ <div className="mt-8 space-y-4">{sections.map(([key,sec])=><section key={key} className="rounded-3xl border bg-card p-6 md:p-8"><h2 className="text-2xl font-serif">{friendly[key]||pretty(key)}</h2><div className="mt-4">{sec.text&&<p className="text-sm leading-7 whitespace-pre-wrap">{sec.text}</p>}{sec.data&&Object.keys(sec.data).length>0&&renderValue(sec.data)}</div></section>)}</div>
+ <div className="mt-10 rounded-3xl border p-8 text-center"><h2 className="text-3xl font-serif">Would you like to help?</h2><p className="text-muted-foreground mt-2">Choose a simple way to support this initiative.</p><Link href={`/donate?campaignId=${encodeURIComponent(campaign.id)}`} className="inline-flex items-center gap-2 mt-5 rounded-full bg-primary text-primary-foreground px-7 py-3 font-semibold">Support Now <ArrowRight size={16}/></Link></div></main><Footer/><CommunityChat/></div>
+}

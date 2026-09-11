@@ -1,0 +1,207 @@
+{
+  "schemaVersion": 2,
+  "id": "recovery-2026-09-11T11-23-12-002Z",
+  "createdAt": "2026-09-11T11:23:12.002Z",
+  "reason": "settings-published",
+  "status": "good",
+  "verifiedAt": "2026-09-11T11:23:20.954Z",
+  "application": {
+    "gitCommit": null,
+    "gitBranch": null,
+    "node": "v24.16.0",
+    "platform": "win32"
+  },
+  "included": {
+    "database": true,
+    "settings": true,
+    "data": true,
+    "uploads": true,
+    "docs": true,
+    "knowledge": true
+  },
+  "mongo": {
+    "status": "complete",
+    "format": "spandana-native-bson-json",
+    "databaseName": "test",
+    "collections": [
+      {
+        "name": "volunteers",
+        "documents": 4,
+        "indexes": 2
+      },
+      {
+        "name": "teamsessions",
+        "documents": 0,
+        "indexes": 3
+      },
+      {
+        "name": "connectprofiles",
+        "documents": 0,
+        "indexes": 2
+      },
+      {
+        "name": "receipts",
+        "documents": 0,
+        "indexes": 3
+      },
+      {
+        "name": "connectpeople",
+        "documents": 0,
+        "indexes": 1
+      },
+      {
+        "name": "newsletters",
+        "documents": 2,
+        "indexes": 3
+      },
+      {
+        "name": "contributions",
+        "documents": 1,
+        "indexes": 3
+      },
+      {
+        "name": "communityinitiatives",
+        "documents": 2,
+        "indexes": 2
+      },
+      {
+        "name": "paymentaccounts",
+        "documents": 4,
+        "indexes": 2
+      },
+      {
+        "name": "requirements",
+        "documents": 1,
+        "indexes": 2
+      },
+      {
+        "name": "galleries",
+        "documents": 4,
+        "indexes": 2
+      },
+      {
+        "name": "paymentprofiles",
+        "documents": 2,
+        "indexes": 2
+      },
+      {
+        "name": "gamelistings",
+        "documents": 8,
+        "indexes": 2
+      },
+      {
+        "name": "stories",
+        "documents": 4,
+        "indexes": 2
+      },
+      {
+        "name": "testimonials",
+        "documents": 4,
+        "indexes": 2
+      },
+      {
+        "name": "fundraisingcampaigns",
+        "documents": 1,
+        "indexes": 2
+      },
+      {
+        "name": "auditevents",
+        "documents": 0,
+        "indexes": 2
+      },
+      {
+        "name": "recurringdonations",
+        "documents": 0,
+        "indexes": 2
+      },
+      {
+        "name": "donationopportunities",
+        "documents": 6,
+        "indexes": 2
+      },
+      {
+        "name": "adminsessions",
+        "documents": 24,
+        "indexes": 3
+      },
+      {
+        "name": "values",
+        "documents": 5,
+        "indexes": 2
+      },
+      {
+        "name": "people",
+        "documents": 0,
+        "indexes": 2
+      },
+      {
+        "name": "teams",
+        "documents": 0,
+        "indexes": 3
+      },
+      {
+        "name": "emergencycampaigns",
+        "documents": 3,
+        "indexes": 2
+      },
+      {
+        "name": "adminaccounts",
+        "documents": 1,
+        "indexes": 3
+      },
+      {
+        "name": "programs",
+        "documents": 11,
+        "indexes": 3
+      },
+      {
+        "name": "refunds",
+        "documents": 0,
+        "indexes": 3
+      },
+      {
+        "name": "blogposts",
+        "documents": 3,
+        "indexes": 2
+      },
+      {
+        "name": "settings",
+        "documents": 2,
+        "indexes": 2
+      },
+      {
+        "name": "events",
+        "documents": 3,
+        "indexes": 2
+      },
+      {
+        "name": "adminrecoverychallenges",
+        "documents": 0,
+        "indexes": 3
+      },
+      {
+        "name": "recyclebinitems",
+        "documents": 0,
+        "indexes": 4
+      },
+      {
+        "name": "transactions",
+        "documents": 1,
+        "indexes": 3
+      }
+    ]
+  },
+  "settings": {
+    "livePresent": true,
+    "draftPresent": true,
+    "historyPresent": true,
+    "mongoSnapshotPresent": true
+  },
+  "secondaryDestination": null,
+  "verification": {
+    "applicationHealth": "healthy",
+    "requiredFilesPresent": true,
+    "reasons": []
+  },
+  "note": "A recovery point is marked GOOD only after its required artifacts are present and application health is verified."
+}

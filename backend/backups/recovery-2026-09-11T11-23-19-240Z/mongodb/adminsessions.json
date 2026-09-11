@@ -1,0 +1,547 @@
+{
+  "name": "adminsessions",
+  "type": "collection",
+  "options": {},
+  "indexes": [
+    {
+      "v": 2,
+      "key": {
+        "_id": 1
+      },
+      "name": "_id_"
+    },
+    {
+      "v": 2,
+      "key": {
+        "tokenHash": 1
+      },
+      "name": "tokenHash_1",
+      "background": true,
+      "unique": true
+    },
+    {
+      "v": 2,
+      "key": {
+        "id": 1
+      },
+      "name": "id_1",
+      "background": true
+    }
+  ],
+  "documents": [
+    {
+      "_id": {
+        "$oid": "6a9c053aec546c317b3247c4"
+      },
+      "tokenHash": "8f6d0a77986b7f4b15de5f6d8387af6e2ec4f82868622b4b86dce454a3884d9c",
+      "adminId": "6a9c0539ec546c317b3247c1",
+      "passwordVersion": 1,
+      "createdAt": {
+        "$date": "2026-09-05T12:04:10.502Z"
+      },
+      "lastActivityAt": {
+        "$date": "2026-09-05T12:04:10.502Z"
+      },
+      "expiresAt": {
+        "$date": "2026-09-05T20:04:10.502Z"
+      },
+      "revokedAt": null,
+      "ip": "::1",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+      "__v": 0
+    },
+    {
+      "_id": {
+        "$oid": "6a9c07009945db66be0e6e60"
+      },
+      "tokenHash": "f244d4302d4e3823527b4f2e934c553f718966694a48c0bbcac9639dd7679ae2",
+      "adminId": "6a9c0539ec546c317b3247c1",
+      "passwordVersion": 1,
+      "createdAt": {
+        "$date": "2026-09-05T12:11:44.716Z"
+      },
+      "lastActivityAt": {
+        "$date": "2026-09-05T12:11:44.716Z"
+      },
+      "expiresAt": {
+        "$date": "2026-09-05T20:11:44.716Z"
+      },
+      "revokedAt": null,
+      "ip": "::1",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+      "__v": 0
+    },
+    {
+      "_id": {
+        "$oid": "6a9c0fb4e2744aeee5e02f46"
+      },
+      "tokenHash": "d00c0e77eb1349114375cdbc1ba651763854e6d4710d983d214eb9918a1abb27",
+      "adminId": "6a9c0539ec546c317b3247c1",
+      "passwordVersion": 1,
+      "createdAt": {
+        "$date": "2026-09-05T12:48:52.376Z"
+      },
+      "lastActivityAt": {
+        "$date": "2026-09-05T12:48:52.376Z"
+      },
+      "expiresAt": {
+        "$date": "2026-09-05T20:48:52.376Z"
+      },
+      "revokedAt": null,
+      "ip": "::1",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+      "__v": 0
+    },
+    {
+      "_id": {
+        "$oid": "6a9c1797ca5861f3a3f51cea"
+      },
+      "tokenHash": "876e062335ea68cf623f9ca345b7ec3fd1e58ce75f00503d93a0a2fd85183674",
+      "adminId": "6a9c0539ec546c317b3247c1",
+      "passwordVersion": 1,
+      "createdAt": {
+        "$date": "2026-09-05T13:22:31.240Z"
+      },
+      "lastActivityAt": {
+        "$date": "2026-09-05T13:22:31.240Z"
+      },
+      "expiresAt": {
+        "$date": "2026-09-05T21:22:31.240Z"
+      },
+      "revokedAt": null,
+      "ip": "::1",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+      "__v": 0
+    },
+    {
+      "_id": {
+        "$oid": "6a9c422b5fd4982846335ef5"
+      },
+      "tokenHash": "65373e96bd27c85a5d17b5bfff9d6d0d4a07f5cd633852db657c3034a0550181",
+      "adminId": "6a9c0539ec546c317b3247c1",
+      "passwordVersion": 1,
+      "createdAt": {
+        "$date": "2026-09-05T16:24:11.248Z"
+      },
+      "lastActivityAt": {
+        "$date": "2026-09-05T16:24:11.248Z"
+      },
+      "expiresAt": {
+        "$date": "2026-09-06T00:24:11.248Z"
+      },
+      "revokedAt": null,
+      "ip": "::1",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+      "__v": 0
+    },
+    {
+      "_id": {
+        "$oid": "6a9d58a0800060ec19e3b01b"
+      },
+      "tokenHash": "b303bdb97fc9914a45e4ef3cb75a40c48ecb63fd3043310f749653b31185667b",
+      "adminId": "6a9c0539ec546c317b3247c1",
+      "passwordVersion": 1,
+      "createdAt": {
+        "$date": "2026-09-06T12:12:16.751Z"
+      },
+      "lastActivityAt": {
+        "$date": "2026-09-06T12:12:16.751Z"
+      },
+      "expiresAt": {
+        "$date": "2026-09-06T20:12:16.751Z"
+      },
+      "revokedAt": {
+        "$date": "2026-09-06T14:18:24.638Z"
+      },
+      "ip": "::1",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+      "__v": 0
+    },
+    {
+      "_id": {
+        "$oid": "6a9d763b8aef7b3679901900"
+      },
+      "tokenHash": "129c4773ce218d726d3403e3891d967cf2dbfc7f9ff150b1ff43e72466cf78fc",
+      "adminId": "6a9c0539ec546c317b3247c1",
+      "passwordVersion": 1,
+      "createdAt": {
+        "$date": "2026-09-06T14:18:35.980Z"
+      },
+      "lastActivityAt": {
+        "$date": "2026-09-06T14:18:35.980Z"
+      },
+      "expiresAt": {
+        "$date": "2026-09-06T22:18:35.980Z"
+      },
+      "revokedAt": null,
+      "ip": "::1",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+      "__v": 0
+    },
+    {
+      "_id": {
+        "$oid": "6a9ddec30489018f66633258"
+      },
+      "tokenHash": "40e8888162e6c51d8e919654835b49e730602548210900e61da8d0dadd987b9b",
+      "adminId": "6a9c0539ec546c317b3247c1",
+      "passwordVersion": 1,
+      "createdAt": {
+        "$date": "2026-09-06T21:44:35.451Z"
+      },
+      "lastActivityAt": {
+        "$date": "2026-09-06T21:44:35.451Z"
+      },
+      "expiresAt": {
+        "$date": "2026-09-07T05:44:35.451Z"
+      },
+      "revokedAt": {
+        "$date": "2026-09-07T02:21:11.058Z"
+      },
+      "ip": "::1",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+      "__v": 0
+    },
+    {
+      "_id": {
+        "$oid": "6a9e1fcadbe0f8fed4674476"
+      },
+      "tokenHash": "bfd9740326586db74128c295cdd7ab8e9475fe60c4258404e322a3b520a12110",
+      "adminId": "6a9c0539ec546c317b3247c1",
+      "passwordVersion": 1,
+      "createdAt": {
+        "$date": "2026-09-07T02:22:02.105Z"
+      },
+      "lastActivityAt": {
+        "$date": "2026-09-07T02:22:02.105Z"
+      },
+      "expiresAt": {
+        "$date": "2026-09-07T10:22:02.105Z"
+      },
+      "revokedAt": null,
+      "ip": "::1",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+      "__v": 0
+    },
+    {
+      "_id": {
+        "$oid": "6a9ef40a3468e212ab5bcb0d"
+      },
+      "tokenHash": "b1d45e2948f218114ba49ab1a743ab3ca558c409d142b30bb6d2af2c1ebc271a",
+      "adminId": "6a9c0539ec546c317b3247c1",
+      "passwordVersion": 1,
+      "createdAt": {
+        "$date": "2026-09-07T17:27:38.473Z"
+      },
+      "lastActivityAt": {
+        "$date": "2026-09-07T17:27:38.473Z"
+      },
+      "expiresAt": {
+        "$date": "2026-09-08T01:27:38.473Z"
+      },
+      "revokedAt": {
+        "$date": "2026-09-07T18:19:13.827Z"
+      },
+      "ip": "::1",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+      "__v": 0
+    },
+    {
+      "_id": {
+        "$oid": "6a9f002741f689de9250d4ca"
+      },
+      "tokenHash": "46bd83b01105477c82b3394383ff5adeb1539c2871dfac5ee9a0b300ed2a1e69",
+      "adminId": "6a9c0539ec546c317b3247c1",
+      "passwordVersion": 1,
+      "createdAt": {
+        "$date": "2026-09-07T18:19:19.944Z"
+      },
+      "lastActivityAt": {
+        "$date": "2026-09-07T18:19:19.944Z"
+      },
+      "expiresAt": {
+        "$date": "2026-09-08T02:19:19.944Z"
+      },
+      "revokedAt": null,
+      "ip": "::1",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+      "__v": 0
+    },
+    {
+      "_id": {
+        "$oid": "6a9f9fd4d905bc0d2bb1e301"
+      },
+      "tokenHash": "da3cefe983f7e7f623311c2c0dc0b5f54e5db77449ec59aa738c565f09c3dfb0",
+      "adminId": "6a9c0539ec546c317b3247c1",
+      "passwordVersion": 1,
+      "createdAt": {
+        "$date": "2026-09-08T05:40:36.141Z"
+      },
+      "lastActivityAt": {
+        "$date": "2026-09-08T05:40:36.141Z"
+      },
+      "expiresAt": {
+        "$date": "2026-09-08T13:40:36.141Z"
+      },
+      "revokedAt": null,
+      "ip": "::1",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+      "__v": 0
+    },
+    {
+      "_id": {
+        "$oid": "6aa02c04049c729eff2a9394"
+      },
+      "tokenHash": "a98050506d6d450e3e48423406976c8208a763b24f5dfab3fdba13442b6adec2",
+      "adminId": "6a9c0539ec546c317b3247c1",
+      "passwordVersion": 1,
+      "createdAt": {
+        "$date": "2026-09-08T15:38:44.407Z"
+      },
+      "lastActivityAt": {
+        "$date": "2026-09-08T15:38:44.407Z"
+      },
+      "expiresAt": {
+        "$date": "2026-09-08T23:38:44.407Z"
+      },
+      "revokedAt": null,
+      "ip": "::1",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+      "__v": 0
+    },
+    {
+      "_id": {
+        "$oid": "6aa0bfe5add9267306521f2d"
+      },
+      "tokenHash": "43015dc41ca302055424967c21d81185b46f3035b76a95cc7b710bfee414b642",
+      "adminId": "6a9c0539ec546c317b3247c1",
+      "passwordVersion": 1,
+      "createdAt": {
+        "$date": "2026-09-09T02:09:41.009Z"
+      },
+      "lastActivityAt": {
+        "$date": "2026-09-09T02:09:41.009Z"
+      },
+      "expiresAt": {
+        "$date": "2026-09-09T10:09:41.009Z"
+      },
+      "revokedAt": null,
+      "ip": "::1",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+      "__v": 0
+    },
+    {
+      "_id": {
+        "$oid": "6aa0c6f3473cb86d088dbd9b"
+      },
+      "tokenHash": "78903dcef299a0b941ac38d8a55d2393bdc1b5a9b9e49129404b4d562857365c",
+      "adminId": "6a9c0539ec546c317b3247c1",
+      "passwordVersion": 1,
+      "createdAt": {
+        "$date": "2026-09-09T02:39:47.970Z"
+      },
+      "lastActivityAt": {
+        "$date": "2026-09-09T02:39:47.970Z"
+      },
+      "expiresAt": {
+        "$date": "2026-09-09T10:39:47.970Z"
+      },
+      "revokedAt": {
+        "$date": "2026-09-09T04:02:14.067Z"
+      },
+      "ip": "::1",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+      "__v": 0
+    },
+    {
+      "_id": {
+        "$oid": "6aa0da68c3476b769aa84bcd"
+      },
+      "tokenHash": "87e8949285f0aa14b2d8149ccd7753e5bbb60f5ab8aa586e5b21fe059fa8eff0",
+      "adminId": "6a9c0539ec546c317b3247c1",
+      "passwordVersion": 1,
+      "createdAt": {
+        "$date": "2026-09-09T04:02:48.286Z"
+      },
+      "lastActivityAt": {
+        "$date": "2026-09-09T04:02:48.286Z"
+      },
+      "expiresAt": {
+        "$date": "2026-09-09T12:02:48.286Z"
+      },
+      "revokedAt": null,
+      "ip": "::1",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+      "__v": 0
+    },
+    {
+      "_id": {
+        "$oid": "6aa17d68cf958f0b982cd94a"
+      },
+      "tokenHash": "4c93470745dd913ba875208656bc9ca962828781f14b9b9d59ff1caad9f6d7a0",
+      "adminId": "6a9c0539ec546c317b3247c1",
+      "passwordVersion": 1,
+      "createdAt": {
+        "$date": "2026-09-09T15:38:16.840Z"
+      },
+      "lastActivityAt": {
+        "$date": "2026-09-09T15:38:16.840Z"
+      },
+      "expiresAt": {
+        "$date": "2026-09-09T23:38:16.840Z"
+      },
+      "revokedAt": null,
+      "ip": "::1",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+      "__v": 0
+    },
+    {
+      "_id": {
+        "$oid": "6aa21d66c23ca71fde4ac3af"
+      },
+      "tokenHash": "f3b6430898a8ab2389b887956eda925aba40120dd0723958bf6713f852770729",
+      "adminId": "6a9c0539ec546c317b3247c1",
+      "passwordVersion": 1,
+      "createdAt": {
+        "$date": "2026-09-10T03:00:54.833Z"
+      },
+      "lastActivityAt": {
+        "$date": "2026-09-10T03:00:54.833Z"
+      },
+      "expiresAt": {
+        "$date": "2026-09-10T11:00:54.833Z"
+      },
+      "revokedAt": {
+        "$date": "2026-09-10T08:05:39.717Z"
+      },
+      "ip": "::1",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+      "__v": 0
+    },
+    {
+      "_id": {
+        "$oid": "6aa264d8c3379422cad67bc4"
+      },
+      "tokenHash": "367cbceab56117bb28123eb14f0380998a76cc69fe6cb80598211d2b8186cb4b",
+      "adminId": "6a9c0539ec546c317b3247c1",
+      "passwordVersion": 1,
+      "createdAt": {
+        "$date": "2026-09-10T08:05:44.640Z"
+      },
+      "lastActivityAt": {
+        "$date": "2026-09-10T08:05:44.640Z"
+      },
+      "expiresAt": {
+        "$date": "2026-09-10T16:05:44.640Z"
+      },
+      "revokedAt": null,
+      "ip": "::1",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+      "__v": 0
+    },
+    {
+      "_id": {
+        "$oid": "6aa2e3e6dc74e7762e88d69d"
+      },
+      "tokenHash": "cb7376f7c0d52b5f4ea938f89f17c671d30c6bd37191b87a6f5973b4ed10b659",
+      "adminId": "6a9c0539ec546c317b3247c1",
+      "passwordVersion": 1,
+      "createdAt": {
+        "$date": "2026-09-10T17:07:50.336Z"
+      },
+      "lastActivityAt": {
+        "$date": "2026-09-10T17:07:50.336Z"
+      },
+      "expiresAt": {
+        "$date": "2026-09-11T01:07:50.336Z"
+      },
+      "revokedAt": null,
+      "ip": "::1",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+      "__v": 0
+    },
+    {
+      "_id": {
+        "$oid": "6aa30f75d25dc58f7a49240a"
+      },
+      "tokenHash": "bc9581b22ccff6336bdbd74f48074560553e5492a2be22a1c495fe50c53b4f6d",
+      "adminId": "6a9c0539ec546c317b3247c1",
+      "passwordVersion": 1,
+      "createdAt": {
+        "$date": "2026-09-10T20:13:41.746Z"
+      },
+      "lastActivityAt": {
+        "$date": "2026-09-10T20:13:41.746Z"
+      },
+      "expiresAt": {
+        "$date": "2026-09-11T04:13:41.746Z"
+      },
+      "revokedAt": null,
+      "ip": "::1",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+      "__v": 0
+    },
+    {
+      "_id": {
+        "$oid": "6aa3a824a9cb9e4a2333b072"
+      },
+      "tokenHash": "579a87513caba7c3097c7343e368e9276f9a4a8d474238b8682838f974179356",
+      "adminId": "6a9c0539ec546c317b3247c1",
+      "passwordVersion": 1,
+      "createdAt": {
+        "$date": "2026-09-11T07:05:08.994Z"
+      },
+      "lastActivityAt": {
+        "$date": "2026-09-11T07:05:08.994Z"
+      },
+      "expiresAt": {
+        "$date": "2026-09-11T15:05:08.994Z"
+      },
+      "revokedAt": null,
+      "ip": "::1",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+      "__v": 0
+    },
+    {
+      "_id": {
+        "$oid": "6aa3d613fccfccf16a9c2231"
+      },
+      "tokenHash": "4fc4f3b66131a322b79b1a06925c956c95e5d3fce5efaf6932099832bce6aee7",
+      "adminId": "6a9c0539ec546c317b3247c1",
+      "passwordVersion": 1,
+      "createdAt": {
+        "$date": "2026-09-11T10:21:07.107Z"
+      },
+      "lastActivityAt": {
+        "$date": "2026-09-11T10:21:07.107Z"
+      },
+      "expiresAt": {
+        "$date": "2026-09-11T18:21:07.107Z"
+      },
+      "revokedAt": null,
+      "ip": "::1",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+      "__v": 0
+    },
+    {
+      "_id": {
+        "$oid": "6aa3d637fccfccf16a9c2247"
+      },
+      "tokenHash": "0bc4d2f5cd20bf16a22ca251f5fbc6fff4a5857c4280dfe687b8bba1c2b90e7c",
+      "adminId": "6a9c0539ec546c317b3247c1",
+      "passwordVersion": 1,
+      "createdAt": {
+        "$date": "2026-09-11T10:21:43.717Z"
+      },
+      "lastActivityAt": {
+        "$date": "2026-09-11T10:21:43.717Z"
+      },
+      "expiresAt": {
+        "$date": "2026-09-11T18:21:43.717Z"
+      },
+      "revokedAt": null,
+      "ip": "::1",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+      "__v": 0
+    }
+  ]
+}

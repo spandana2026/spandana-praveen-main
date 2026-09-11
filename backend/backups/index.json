@@ -1,0 +1,87 @@
+{
+  "schemaVersion": 2,
+  "updatedAt": "2026-09-11T12:30:38.746Z",
+  "latestGood": "recovery-2026-09-11T12-30-36-007Z",
+  "backups": [
+    {
+      "id": "recovery-2026-09-11T12-30-36-007Z",
+      "createdAt": "2026-09-11T12:30:36.007Z",
+      "status": "good",
+      "reason": "settings-published",
+      "gitCommit": null,
+      "sizeBytes": 3935
+    },
+    {
+      "id": "recovery-2026-09-11T12-30-33-054Z",
+      "createdAt": "2026-09-11T12:30:33.054Z",
+      "status": "good",
+      "reason": "settings-published",
+      "gitCommit": null,
+      "sizeBytes": 3935
+    },
+    {
+      "id": "recovery-2026-09-11T12-30-30-611Z",
+      "createdAt": "2026-09-11T12:30:30.611Z",
+      "status": "good",
+      "reason": "settings-published",
+      "gitCommit": null,
+      "sizeBytes": 3935
+    },
+    {
+      "id": "recovery-2026-09-11T12-30-28-261Z",
+      "createdAt": "2026-09-11T12:30:28.261Z",
+      "status": "good",
+      "reason": "settings-published",
+      "gitCommit": null,
+      "sizeBytes": 3935
+    },
+    {
+      "id": "recovery-2026-09-11T11-23-19-240Z",
+      "createdAt": "2026-09-11T11:23:19.240Z",
+      "status": "good",
+      "reason": "settings-published",
+      "gitCommit": null,
+      "sizeBytes": 4129
+    },
+    {
+      "id": "recovery-2026-09-11T11-23-17-015Z",
+      "createdAt": "2026-09-11T11:23:17.015Z",
+      "status": "good",
+      "reason": "settings-published",
+      "gitCommit": null,
+      "sizeBytes": 4129
+    },
+    {
+      "id": "recovery-2026-09-11T11-23-12-002Z",
+      "createdAt": "2026-09-11T11:23:12.002Z",
+      "status": "good",
+      "reason": "settings-published",
+      "gitCommit": null,
+      "sizeBytes": 4129
+    },
+    {
+      "id": "recovery-2026-09-11T11-23-12-908Z",
+      "createdAt": "2026-09-11T11:23:12.908Z",
+      "status": "good",
+      "reason": "settings-published",
+      "gitCommit": null,
+      "sizeBytes": 4129
+    },
+    {
+      "id": "recovery-2026-09-11T11-22-44-307Z",
+      "createdAt": "2026-09-11T11:22:44.307Z",
+      "status": "good",
+      "reason": "settings-published",
+      "gitCommit": null,
+      "sizeBytes": 4129
+    },
+    {
+      "id": "recovery-2026-09-11T11-22-39-409Z",
+      "createdAt": "2026-09-11T11:22:39.409Z",
+      "status": "good",
+      "reason": "settings-published",
+      "gitCommit": null,
+      "sizeBytes": 4129
+    }
+  ]
+}

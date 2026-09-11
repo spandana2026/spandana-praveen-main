@@ -1,0 +1,122 @@
+[
+  {
+    "id": "donate-tree",
+    "title": "Plant a Tree",
+    "description": "Support native tree planting and greener community spaces.",
+    "icon": "🌱",
+    "type": "fixed",
+    "geography": "both",
+    "pricing": {
+      "INR": { "presets": [50, 100, 250], "unitCost": null, "unitName": "" },
+      "USD": { "presets": [1, 3, 5], "unitCost": null, "unitName": "" }
+    },
+    "quantityPresets": [],
+    "targetQuantity": null,
+    "targetAmountINR": null,
+    "targetAmountUSD": null,
+    "impactText": "Every contribution helps create greener, healthier shared spaces.",
+    "active": true,
+    "published": true,
+    "order": 10
+  },
+  {
+    "id": "donate-child",
+    "title": "Sponsor a Child",
+    "description": "Support books, learning materials and school participation for one month.",
+    "icon": "📚",
+    "type": "fixed",
+    "geography": "both",
+    "pricing": {
+      "INR": { "presets": [500, 1000, 2000], "unitCost": null, "unitName": "" },
+      "USD": { "presets": [6, 12, 25], "unitCost": null, "unitName": "" }
+    },
+    "quantityPresets": [],
+    "targetQuantity": null,
+    "targetAmountINR": null,
+    "targetAmountUSD": null,
+    "impactText": "Your support helps a child participate, learn and grow with dignity.",
+    "active": true,
+    "published": true,
+    "order": 20
+  },
+  {
+    "id": "donate-medical",
+    "title": "Medical Consultation",
+    "description": "Help bring health screening, consultation and essential care closer to an underserved community.",
+    "icon": "🏥",
+    "type": "fixed",
+    "geography": "both",
+    "pricing": {
+      "INR": { "presets": [500, 1000, 2500], "unitCost": null, "unitName": "" },
+      "USD": { "presets": [6, 15, 30], "unitCost": null, "unitName": "" }
+    },
+    "quantityPresets": [],
+    "targetQuantity": null,
+    "targetAmountINR": null,
+    "targetAmountUSD": null,
+    "impactText": "Support confidential screening, consultation and access to care.",
+    "active": true,
+    "published": true,
+    "order": 30
+  },
+  {
+    "id": "donate-family",
+    "title": "Feed a Family",
+    "description": "Support nutritious meals and practical food assistance for a family.",
+    "icon": "🍱",
+    "type": "fixed",
+    "geography": "both",
+    "pricing": {
+      "INR": { "presets": [200, 500, 1000], "unitCost": null, "unitName": "" },
+      "USD": { "presets": [3, 6, 12], "unitCost": null, "unitName": "" }
+    },
+    "quantityPresets": [],
+    "targetQuantity": null,
+    "targetAmountINR": null,
+    "targetAmountUSD": null,
+    "impactText": "Help a family access nutritious meals with dignity.",
+    "active": true,
+    "published": true,
+    "order": 40
+  },
+  {
+    "id": "donate-water",
+    "title": "Clean Water Access",
+    "description": "Support practical water purification and access for households and communities.",
+    "icon": "💧",
+    "type": "fixed",
+    "geography": "both",
+    "pricing": {
+      "INR": { "presets": [1000, 2500, 5000], "unitCost": null, "unitName": "" },
+      "USD": { "presets": [12, 30, 60], "unitCost": null, "unitName": "" }
+    },
+    "quantityPresets": [],
+    "targetQuantity": null,
+    "targetAmountINR": null,
+    "targetAmountUSD": null,
+    "impactText": "Support safer, more reliable access to clean water.",
+    "active": true,
+    "published": true,
+    "order": 50
+  },
+  {
+    "id": "donate-bicycle",
+    "title": "Bicycle for a Girl",
+    "description": "Sponsor mobility that can help a girl reach education and community opportunities.",
+    "icon": "🚲",
+    "type": "unit",
+    "geography": "india",
+    "pricing": {
+      "INR": { "presets": [], "unitCost": 5000, "unitName": "bicycle" },
+      "USD": { "presets": [], "unitCost": null, "unitName": "" }
+    },
+    "quantityPresets": [1, 2, 5, 10],
+    "targetQuantity": 50,
+    "targetAmountINR": 250000,
+    "targetAmountUSD": null,
+    "impactText": "Each bicycle supports practical mobility toward education and opportunity.",
+    "active": true,
+    "published": true,
+    "order": 60
+  }
+]
